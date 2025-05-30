@@ -1,0 +1,17 @@
+*{
+    padding: 0;margin: 0;
+}
+.loginuser{
+    height: 90vh;
+    width: 100vw;
+    box-sizing: border-box;
+}
+.left{
+    width: 60%;
+    display: flex;
+    justify-content: center;
+}
+.right{
+    width: 40%;
+    
+}
