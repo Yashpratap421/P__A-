@@ -1,17 +1,140 @@
-*{
-    padding: 0;margin: 0;
-}
-.loginuser{
-    height: 90vh;
-    width: 100vw;
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
-.left{
+.loginuser {
+    height: 90vh;
+    width: 100vw;
+    display: flex;
+    padding-top: 2px;
+    justify-content: space-between;
+    background-color: white;
+}
+
+.left {
     width: 60%;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
-.right{
+
+.left img {
+    max-height: 90%;
+    width: auto;
+    object-fit: contain;
+}
+
+.right {
     width: 40%;
-    
+    padding: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+.right .border {
+    width: 100%;
+    max-width: 400px;
+    padding: 40px 32px;
+    border-radius: 12px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.right p {
+    font-size: 24px;
+    font-weight: 700;
+    color: #3777f0;
+    margin-bottom: 24px;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.right form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+form .email,
+form .password {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+form input {
+    padding: 12px 14px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+form input:focus {
+    border-color: #3777f0;
+    box-shadow: 0 0 0 2px rgba(55, 119, 240, 0.2);
+    outline: none;
+}
+
+form button {
+    padding: 12px;
+    background-color: #3737f0;
+    color: white;
+    width: 100%;
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+form button:hover {
+    background-color: #2f2fd1;
+}
+
+.right .regis {
+    margin-top: 20px;
+    font-size: 14px;
+    color: gray;
+    font-weight: 500;
+}
+
+.right .regis span {
+    color: #3b6df5;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.right .regis span:hover {
+    text-decoration: underline;
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 768px) {
+    .loginuser {
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+    }
+
+    .left, .right {
+        width: 100%;
+    }
+
+    .left img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .right {
+        padding: 20px;
+    }
 }

@@ -1,0 +1,112 @@
+.register-container {
+  height: 90vh;
+  width: 100vw;
+  display: flex;
+  padding-top: 2px;
+  box-sizing: border-box;
+}
+
+.register-left {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.register-left img {
+  min-height: 70%;
+  width: auto;
+}
+
+.register-right {
+  width: 40%;
+  padding: 24px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.register-box {
+  width: 100%;
+  padding: 32px 24px;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.register-box p {
+  font-size: 24px;
+  font-weight: 700;
+  color: #3777f0;
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.register-form {
+  margin-top: 30px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.register-input {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.register-input input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  transition: 0.3s ease;
+  font-size: 14px;
+}
+
+.register-input input:focus {
+  border-color: #3777f0;
+  box-shadow: 0 0 0 2px rgba(55, 119, 240, 0.2);
+  outline: none;
+}
+
+.register-btn {
+  padding: 12px;
+  background-color: #3737f0;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.register-btn:hover {
+  background-color: #2f2fd1;
+}
+
+#register-switch  {
+  margin-top: 16px;
+  font-size: 14px;
+  color: gray;
+  font-weight: 500;
+  text-align: center;
+}
+
+#register-switch span {
+  color: #3b6df5;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+#register-switch span:hover {
+  text-decoration: underline;
+}
