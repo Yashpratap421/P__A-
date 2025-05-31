@@ -4,8 +4,12 @@ export const DataContext = createContext();
 
 const DataProvider = ({ children }) => {
 
+  const [user, setUser] = useState('')
+
+  console.log(user)
+
   return (
-    <DataContext.Provider value={{}}>
+    <DataContext.Provider value={{setUser}}>
       {children}
     </DataContext.Provider>
   );

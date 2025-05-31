@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../../../public/Css/Auth/RegisterUser.css';
 import registerpic from '../../../public/images/register.png';
@@ -21,15 +21,38 @@ const RegisterUser = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log('Registration Data:', formData);
+const handleSubmit = async (e) => {
+  e.preventDefault();
+  try {
+    const response = await fetch('http://localhost:4000/api/user/login', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(formData)  
+    });
 
-    // TODO: Add registration API call here
-    // Example:
-    // const res = await axios.post('/api/register', formData);
-    // if (res.success) navigate('/login');
-  };
+    if (!response.ok) {
+      const errorData = await response.json();
+      alert(`Error: ${errorData.message || 'Something went wrong'}`);
+      return;
+    }
+        setUser(data.user);  
+        setFormData({
+      name: '',
+      email: '',
+      phone: '',
+      password: ''
+    });
+    const data = await response.json();
+    console.log('Response from backend:', data);
+
+  } catch (error) {
+    console.error('Error connecting to backend:', error);
+    alert('Failed to connect to server.');
+  }
+};
+
 
   return (
     <div className='register-container'>
